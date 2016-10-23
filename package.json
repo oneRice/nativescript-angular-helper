@@ -1,0 +1,25 @@
+{
+  "name": "nativescript-angular-helper",
+  "version": "1.0.0",
+  "description": "command line tool for NativeScript-Angular development",
+  "bin": {
+    "tns-helper" : "bin/tns-helper.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oneRice/nativescript-angular-helper.git"
+  },
+  "keywords": [
+    "nativescript",
+    "angular"
+  ],
+  "author": "onerice",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oneRice/nativescript-angular-helper/issues"
+  },
+  "homepage": "https://github.com/oneRice/nativescript-angular-helper#readme"
+}
