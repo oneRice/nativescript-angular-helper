@@ -21,6 +21,7 @@ function help_detail(args) {
 function help(args) {
     if (args.length === 0) {
         mainHelp()
+        return;
     }
     var command = args[0];
 

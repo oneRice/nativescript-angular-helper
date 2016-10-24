@@ -1,6 +1,6 @@
-var loghelp = require("./help.js").loghelp;
-var help = require("./help.js").help;
-var generate = require("./generate.js").generate;
+var loghelp = require("./help/help.js").loghelp;
+var help = require("./help/help.js").help;
+var generate = require("./generate/generate.js").generate;
 
 var command_operator = {
     "help" : help,
