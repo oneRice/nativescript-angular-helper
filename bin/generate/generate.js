@@ -3,8 +3,9 @@ var generate_component = require("./component.js").generate_component;
 var generate_page = require("./page.js").generate_page;
 
 var command_operator = {
-    "component" : generate_component,
+    // "component" : generate_component,
     "page" : generate_page,
+    "p" : generate_page,
 }
 
 

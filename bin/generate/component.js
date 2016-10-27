@@ -1,20 +1,5 @@
 var loghelp = require("../help/help.js").loghelp;
-
-function notValidName(name) {
-    return false;
-}
-
-function toTypeName(name) {
-    var name_part = name.split('-');
-    name_part = name_part.map(function(value) {
-        if (value === "") {
-            return "";
-        }
-        
-        return value[0].toUpperCase() + value.slice(1);
-    })
-    return name_part.join("");
-}
+var Name = require("./name.js");
 
 function generate_component(args) {
     if (args.length === 0) {
@@ -32,14 +17,14 @@ function generate_component(args) {
 
     var rawname = args[0];
     
-    if (notValidName(name)){
+    if (Name.notValidName(name)){
         console.log("Please input valid name.")
         loghelp("component name");
         return;
     }
     
     var name = rawname;
-    var typename = toTypeName(name);
+    var typename = Name.toTypeName(name);
 
     console.log("composing " + rawname + " typename " + typename);
 }
