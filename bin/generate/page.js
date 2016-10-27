@@ -1,12 +1,14 @@
+// Node js Module
 var fs = require("fs"); 
 var path = require("path");
 
+// Package Module
 var Name = require("./name.js");
-var Blueprint = require("./blueprint/page.js");
-
+var Blueprint = require("./blueprint/page/page.js");
 var loghelp = require("../help/help.js").loghelp;
 
-var page_to_root = "./app/pages"
+// MACRO Value
+var PAGE_TO_TOOT = "./app/pages"
 
 function generate_page(args) {
     if (! validArgument(args)) {
@@ -24,7 +26,7 @@ function generate_page(args) {
     var typename = Name.toTypeName(args[0]);
 
     // path for page
-    var page_path = path.join(process.cwd(), page_to_root, name);
+    var page_path = path.join(process.cwd(), PAGE_TO_TOOT, name);
     if (! path.isAbsolute(page_path)){
         console.log(page_path + " is not a valid path");
         return;
@@ -50,6 +52,7 @@ function generate_page(args) {
             console.log("Folder " + page_path + " successfully.");
         }
     })
+
     // generate using blueprint
     for (var func of Blueprint.file_function) {
         func(name, typename, page_path);

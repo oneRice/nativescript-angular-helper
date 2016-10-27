@@ -1,3 +1,4 @@
+// Package Module
 var loghelp = require("./help/help.js").loghelp;
 var help = require("./help/help.js").help;
 var generate = require("./generate/generate.js").generate;

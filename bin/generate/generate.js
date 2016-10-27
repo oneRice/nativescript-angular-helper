@@ -8,7 +8,6 @@ var command_operator = {
     "p" : generate_page,
 }
 
-
 function generate(args) {
     if (args.length === 0) {
         console.log("please input what to generate");
@@ -24,7 +23,6 @@ function generate(args) {
         console.log("please input valid type to generate");
         loghelp("generate");        
     }
-
 }
 
 exports.generate = generate;
